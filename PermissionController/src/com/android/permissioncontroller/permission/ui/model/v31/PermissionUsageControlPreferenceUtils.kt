@@ -124,18 +124,7 @@ object PermissionUsageControlPreferenceUtils {
                 }
                 else -> 0
             }
-<<<<<<< HEAD
-=======
-            Manifest.permission_group.CAMERA -> {
-                PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__CAMERA_ACCESS_TIMELINE_VIEWED
-            }
-            Manifest.permission_group.MICROPHONE -> {
-                PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__MICROPHONE_ACCESS_TIMELINE_VIEWED
-            }
-            else -> 0
-        }
-        if (act == 0) return
->>>>>>> 72c211c57 (PermissionController: Enable usage timeline for all permission groups)
-        PermissionControllerStatsLog.write(PERMISSION_USAGE_FRAGMENT_INTERACTION, sessionId, act)
+            if (act == 0) return
+            PermissionControllerStatsLog.write(PERMISSION_USAGE_FRAGMENT_INTERACTION, sessionId, act)
     }
 }
